@@ -14,7 +14,7 @@ class ClienteGanador extends Command
      * @var string
      */
     protected $signature = 'app:cliente-ganador';
-   //para probar php artisan schedule:work   | php artisan policies:app:cliente-ganador
+   //para probar php artisan schedule:work   | php artisan :app:cliente-ganador
     /**
      * The console command description.
      *
@@ -34,7 +34,7 @@ class ClienteGanador extends Command
         // Actualizar el campo "ganador" del cliente seleccionado a true
         Cliente::where('id', $clienteSeleccionado->id)->update(['ganador' => true]);
 
-        $this->info('Se ha seleccionado un cliente al azar de los últimos 5 clientes en la base de datos y se ha marcado como ganador.');
+        $this->info('Se ha seleccionado un cliente al azar de los últimos 5 clientes en la base de datos y se ha sacado marcado 1  como ganador al random.');
     }
 
 }

@@ -26,34 +26,7 @@ var baseURL= {!! json_encode(url('/')) !!}
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-        <div>
-            <h6>Desarrollado por Jhon Ariza..</h6>
-        </div>
-
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                    @if(auth()->check())
-                    <!-- Left Side Of Navbar -->
-
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="navbar-brand" href="{{ route('cliente.index') }}">{{ __('Clientes') }}</a>
-                        </li>
-                    </ul>
-                @endif
-
-
-                </div>
-            </div>
-        </nav>
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
